@@ -1,0 +1,13 @@
+===================
+CUBE
+===================
+SELECT s.division, s.district, COUNT(*)
+FROM star_schema.fact_table t
+JOIN star_schema.store_dim s on s.store_key=t.store_key
+JOIN star_schema.time_dim tim on tim.time_key=t.time_key
+WHERE tim.month=12
+GROUP BY CUBE(s.division, s.district, tim.month)
+ORDER BY s.division
+
+
+
