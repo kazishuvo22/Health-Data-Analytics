@@ -1,0 +1,13 @@
+SELECT 
+s.division,
+s.district,
+tim.month, 
+-- i.item_name, 
+COUNT(*)
+FROM star_schema.fact_table t
+JOIN star_schema.store_dim s on s.store_key = t.store_key
+JOIN star_schema.time_dim tim on tim.time_key = t.time_key
+--JOIN star_schema.item_dim i on i.item_key = t.item_key
+GROUP BY ROLLUP(s.division, s.district, tim.month)
+--ORDER BY s.division
+
