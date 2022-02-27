@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -130,6 +129,7 @@ dmypy.json
 .pyre/
 
 .idea/
-=======
-.idea/
->>>>>>> 3d6ca3a40f4ac0bfcbc10012648f0012c047df93
+
+**/*.ipynb_checkpoints/
+.ipynb_checkpoints/
+
