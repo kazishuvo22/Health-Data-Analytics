@@ -1,5 +1,6 @@
 from api.services.q1 import Query1API
 from flask import Blueprint
+
 # from flask_cors import CORS
 
 query_api = Blueprint('queryapi', __name__)

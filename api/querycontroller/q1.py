@@ -1,5 +1,7 @@
 from api.database.dbcon import PostgresConnection
 import pandas as pd
+
+
 class Query1:
     def __init__(self):
         self.con = PostgresConnection().getConnection()
@@ -20,6 +22,7 @@ class Query1:
         pd_data = pd_data.dropna()
         # print(pd_data)
         return pd_data.to_dict(orient='records')
+
 
 if __name__ == '__main__':
     q1 = Query1()

@@ -2,6 +2,7 @@ from flask import jsonify
 from flask.views import MethodView
 from api.querycontroller.q1 import Query1
 
+
 class Query1API(MethodView):
     def __init__(self):
         self.q1 = Query1()
@@ -19,7 +20,7 @@ class Query1API(MethodView):
                  },....
                 ]
         '''
-        result = self.q1.execute() ## Dataframe
+        result = self.q1.execute()  ## Dataframe
         # print(jsonify(result))
         return jsonify(result)
 
